@@ -8,11 +8,6 @@ from . import models
 from . import translator
 import  os
 
-"""@api_view(['POST'])
-def translate(request):
-  if request.method == 'POST':
-    test = request.POST.get("test", "")
-    return Response("worked!!!")"""
 
 
 class TranslationCreate(generics.CreateAPIView):

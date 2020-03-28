@@ -28,6 +28,6 @@ schema_view = get_schema_view(title='Pastebin API')
 
 urlpatterns = [
     path('schema/', schema_view),
-    url(r'^docs/', include_docs_urls(title='Todo API', description='RESTful API for Todo')),
-    url(r'^api/', include('api.urls')),
+    url(r'^docs/', include_docs_urls(title='Neural Machine Translation NMT API', description='RESTful API Neural Machine Translation')),
+    url(r'^api/', include('api.urls')), 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
