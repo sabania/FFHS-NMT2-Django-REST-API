@@ -1,0 +1,10 @@
+tensorflow==1.15
+tensor2tensor
+django
+djangorestframework
+coreapi
+pyyaml
+ipywidgets
+tensorflow-serving-api==1.15
+django-core
+gunicorn

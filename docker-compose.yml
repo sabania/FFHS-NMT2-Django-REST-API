@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  ffhsnmt2:
+    image: ffhsnmt2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9091

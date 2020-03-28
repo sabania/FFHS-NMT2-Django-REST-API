@@ -16,13 +16,7 @@ from tensor2tensor.utils import usr_dir
 from tensor2tensor.utils.hparam import HParams
 import tensorflow as tf
 
-"""
-t2t_usr_dir = "/storage/t2t/code/MyProblems"
-server="ec2-54-190-141-233.us-west-2.compute.amazonaws.com:9000"
-servable_name="var2"
-problem="variante2"
-data_dir = "C:\\Users\\arben.sabani\\Documents\\Private\\FFHS\Bachelor-Thesis\\FS2019\\Productiv\\Tests\\t2t\\data\\var2"
-"""
+
 class Translator():
   def __init__(self, t2t_usr_dir, server, servable_name, problem, data_dir):
     self.t2t_usr_dir = t2t_usr_dir
@@ -54,5 +48,4 @@ class Translator():
     outputs = serving_utils.predict([inputs], problem, request_fn)
     outputs, = outputs
     output, score = outputs
-    score_text = score
     return {'inputs': inputs, 'outputs':output, 'scores':score}
