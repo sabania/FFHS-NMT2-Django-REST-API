@@ -30,11 +30,11 @@ class TranslationCreate(generics.CreateAPIView):
     transl = translator.Translator(
       # Pfad zum Ordner der Problem-Klasse des Lösungskonzepts
       # Für docker uncomment
-      t2t_usr_dir='./tensorTotensor/code/MyProblems',
-      #t2t_usr_dir='ffhs_nmt2/tensorTotensor/code/MyProblems',
+      #t2t_usr_dir='./tensorTotensor/code/MyProblems',
+      t2t_usr_dir='ffhs_nmt2/tensorTotensor/code/MyProblems',
       # Server und Port wo das Modell in Tensorflow Serving deployed ist
       # Für docker brauchen wir die IP des model serving containers
-      server='ffhsnmt2model:8500',
+      server='localhost:8500',
       #server = 'localhost:8500',
       # Name des Models auf Tensorflow Serving
       servable_name=trreqserializer.data['model'],
@@ -42,8 +42,8 @@ class TranslationCreate(generics.CreateAPIView):
       problem=trreqserializer.data['model'],
       # Pfad zum Ordner wo das Vokabular zu finden ist
       # Für docker uncomment
-      data_dir='./tensorTotensor/data/var2')
-      #data_dir='ffhs_nmt2/tensorTotensor/data/var2')
+      #data_dir='./tensorTotensor/data/var2')
+      data_dir='ffhs_nmt2/tensorTotensor/data/var2')
     # Ausgangssatz
     inputs = trreqserializer.data['inputs']
     if('corrections' in trreqserializer.data):
