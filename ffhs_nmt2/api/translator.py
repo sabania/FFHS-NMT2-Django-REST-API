@@ -31,7 +31,7 @@ class Translator():
     request_fn = serving_utils.make_grpc_request_fn(
       servable_name=self.servable_name,
       server=self.server,
-      timeout_secs=10)
+      timeout_secs=60)
     return request_fn
 
   # Methode die für das Übersetzen der Eingabe mit Hilfe des Modells auf Tensorflow Serving zustädig ist
