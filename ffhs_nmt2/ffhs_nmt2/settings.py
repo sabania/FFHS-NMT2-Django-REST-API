@@ -25,7 +25,7 @@ SECRET_KEY = 'tp1*-nodeo*(=7c#g)28@^7s97e3vb5pk7m&)kcjl1p!rg54a)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 REST_FRAMEWORK = {'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
 
